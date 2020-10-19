@@ -2,13 +2,14 @@
 
 {% block title %} Contact
 {% endblock title %}
-
+{% block contactactive %}active
+{% endblock contactactive %}
 
 {% block body %}
 <div class="container my-3">
-    <form action="/contact" method="POST">
-        {% csrf_token %}
         <h3>Contact us </h3>
+    <form  method="POST" action="/contact/">
+        {% csrf_token %}
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">

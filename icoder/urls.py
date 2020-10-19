@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import path ,include
 import blog , home
 
+admin.site.site_title = "iCoder"
+admin.site.index_title = "Welcome to iCoder"
+admin.site.site_header = "iCoder Admin Panel"
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
